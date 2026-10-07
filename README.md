@@ -62,7 +62,7 @@ TendieMaker/
 - **`AVAssetImageGenerator` needs zero time tolerance.** Without `requestedTimeToleranceBefore/After = .zero`, it returns the nearest keyframe for many timestamps — we shipped a 149-frame tendie containing only a handful of unique images. Smooth after the fix.
 - **HDR videos need tone-mapping** before JPEG encoding, or every frame comes out black.
 
-##Contact
+## Contact
 
 Questions or something broken? Hit me up on X: @GOT_MUNCH1ES or IG @mikevillarroel
 
