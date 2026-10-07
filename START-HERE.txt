@@ -1,0 +1,43 @@
+TendieMaker — FRESH START (v0.8-ready)
+====================================
+
+This folder is a complete, ready-to-open Xcode project. No File > New > Project,
+no dragging files in, no deleting duplicates.
+
+STEPS (5 minutes):
+
+1. (Optional) Delete the old "TendieMaker" folder from your Mac to keep it clean.
+
+2. Double-click  TendieMaker.xcodeproj   to open it in Xcode.
+
+3. In the left sidebar, click the BLUE "TendieMaker" icon at the very top,
+   then the "Signing & Capabilities" tab, and under "Team" pick your
+   Apple ID team. (Xcode > Settings > Apple Accounts to add it, if needed.)
+
+4. Plug in your iPhone with a cable. At the top of the Xcode window,
+   next to the Run (play) button, pick your iPhone as the destination.
+
+5. Press Run.
+
+HOW TO KNOW YOU HAVE THE NEW ONE:
+Open the app on your iPhone and look at the very bottom of the screen.
+It must say:  App version: v0.8-ready
+
+If it does NOT say that, the old build is still on your phone:
+delete the TendieMaker app from the phone first, then press Run again.
+
+WHAT'S NEW IN v0.8-ready:
+- Same HDR frame-extraction fix as v0.7-hdr (this is the version that
+  should stop the black-screen tendies).
+- The app now RESETS ITSELF after a build finishes: once you close the
+  share sheet, the form goes back to the start, ready for the next video.
+- The build runs fully in the background, so typing a name stays smooth.
+
+NOTE: your phone may now show TWO "TendieMaker" icons (old + new).
+Delete the old one from the phone.
+
+THEN TEST:
+Pick Video > choose one > pick a mode > Build Tendie.
+Watch the "Progress" section: it shows the first extracted frame.
+If the preview is BLACK, the problem is frame extraction on that video -
+tell Jarvis what the status text says (e.g. "First frame: 1170x2532").
