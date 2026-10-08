@@ -25,7 +25,7 @@ TendieMaker is a native iOS app that extracts frames from a video on your phone 
 - iPhone running iOS 17.0+
 - Xcode 16+ on a Mac (to build & install)
 - An Apple Developer account (free tier works) for signing
-- AirCard-iOS to flash the `.tendies` onto your wallpaper
+- [AirCard-iOS](https://github.com/Mak5er/AirCard-iOS) to flash the `.tendies` onto your wallpaper
 
 ## Build & Install
 
