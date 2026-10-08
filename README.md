@@ -2,7 +2,7 @@
 
 Turn any video into an animated `.tendies` wallpaper for your iPhone.
 
-TendieMaker is a native iOS app that extracts frames from a video on your phone and packages them as a `.tendies` file — ready to flash with [AirCard-iOS](https://github.com/](https://github.com/Mak5er/AirCard-iOS) for animated lock screen / home screen wallpapers.
+TendieMaker is a native iOS app that extracts frames from a video on your phone and packages them as a `.tendies` file — ready to flash with [AirCard-iOS]([https://github.com/](https://github.com/Mak5er/AirCard-iOS)]) for animated lock screen / home screen wallpapers.
 
 ![TendieMaker icon](TendieMaker/Assets.xcassets/AppIcon.appiconset/icon-1024.png)
 
