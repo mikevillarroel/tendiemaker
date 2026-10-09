@@ -406,7 +406,7 @@ struct ContentView: View {
                     }
 
                     VStack(spacing: 2) {
-                        Text("App version: v0.9.2")
+                        Text("App version: v0.9.3")
                             .font(.caption)
                             .foregroundColor(.secondary)
                         Text("Made with 🔥 and chicken tenders")
