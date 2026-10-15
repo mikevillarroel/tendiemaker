@@ -1,71 +1,54 @@
-# TendieMaker 🍗
+# Tendie Maker — iOS app source
 
-Turn any video into an animated `.tendies` wallpaper for your iPhone.
+Builds `.tendies` wallpaper packages from a video, on your iPhone.
+Same engine as the desktop `build_tendie.py`.
 
-TendieMaker is a native iOS app that extracts frames from a video on your phone and packages them as a `.tendies` file — ready to flash with [AirCard-iOS](https://github.com/Mak5er/AirCard-iOS) for animated lock screen / home screen wallpapers.
+## Install (easy way)
 
-![TendieMaker icon](TendieMaker-icon-web.png)
+1. Download the unsigned `.ipa` from [Releases](https://github.com/mikevillarroel/tendiemaker/releases).
+2. Sign it with [ESign](https://esign.yyyue.xyz), SideStore, or AltStore using your own certificate.
+3. Install it on your iPhone.
 
-## Features
+## Build from source
 
-- **Pick any video** from your photo library
-- **Three build modes:**
-  - **Cover** — fill the screen, crop to fit (default)
-  - **Fit** — whole video visible, blurred-fill background
-  - **Native** — video's own resolution, untouched
-- **Live first-frame preview** while building
-- **Up to 400 frames** per tendie (auto-adjusts fps to fit the budget)
-- **HDR tone-mapping** — Dolby Vision videos won't come out black
-- **Exact frame seeking** — no duplicate frames, smooth playback
-- **Stored (uncompressed) ZIP packaging** — avoids a whole class of corruption bugs
-- Share the `.tendies` file straight from the app
+### Files
 
-## Requirements
+- `TendieMakerApp.swift` — app entry point
+- `ContentView.swift` — UI: pick video, choose mode, build, share
+- `TendieBuilder.swift` — frame extraction (AVFoundation) + .tendies packaging
+- `ZipWriter.swift` — dependency-free ZIP writer
 
-- iPhone running iOS 17.0+
-- Xcode 16+ on a Mac (to build & install)
-- An Apple Developer account (free tier works) for signing
-- [AirCard-iOS](https://github.com/Mak5er/AirCard-iOS) to flash the `.tendies` onto your wallpaper
+## Setup on your Mac (5 min, no terminal)
 
-## Build & Install
+1. Open **Xcode** → File → New → Project → **iOS → App**.
+   - Product Name: `TendieMaker`
+   - Interface: **SwiftUI**, Language: **Swift**
+   - Save it anywhere.
+2. In the project navigator, delete the default `ContentView.swift`.
+3. Drag these 4 files into the project (check "Copy items if needed"):
+   - `TendieMakerApp.swift`
+   - `ContentView.swift`
+   - `TendieBuilder.swift`
+   - `ZipWriter.swift`
+4. Click the project name at the top → **Signing & Capabilities** →
+   pick your Apple ID as Team (Xcode → Settings → Accounts to add it).
+5. Connect your iPhone with a cable, select it in the run destination
+   (top bar, next to the play button), and press **Run** (▶).
 
-1. Clone this repo
-2. Open `TendieMaker.xcodeproj` in Xcode
-3. Select the **TendieMaker** target → **Signing & Capabilities** → pick your Team
-4. Select your iPhone as the run destination
-5. Hit **Run** (⌘R)
+That's it — no compiling by hand, Xcode does everything.
 
-No CocoaPods, no SPM dependencies — pure Swift + SwiftUI, only Apple frameworks (`AVFoundation`, `CoreImage`, `UIKit`).
+## Using the app
 
-## How it works
+1. Tap **Pick Video**, choose one from your library.
+2. Pick a mode: **Cover** (fill screen), **Fit** (whole video),
+   **Native** (untouched size).
+3. Optionally set a name, tap **Build Tendie**.
+4. When done, the share sheet pops up with the `.tendies` file —
+   save it to Files, then flash it with AirCard like usual.
 
-1. `TendieBuilder.swift` — loads the video with `AVAsset`, extracts frames at exact timestamps via `AVAssetImageGenerator` (zero time tolerance), tone-maps HDR→SDR through `CoreImage`, renders per the selected mode, and writes one JPEG per frame.
-2. `ZipWriter.swift` — minimal hand-rolled ZIP writer using **stored** (method 0, no compression). JPEGs barely compress anyway, and this sidesteps deflate corruption entirely.
-3. The frames + a generated `main.caml` (`CAKeyframeAnimation`, discrete, infinite repeat) are zipped into the `.tendies` package.
+## Notes
 
-## Project structure
-
-```
-TendieMaker/
-├── TendieMaker/
-│   ├── TendieMakerApp.swift   # App entry point
-│   ├── ContentView.swift      # UI: picker, mode select, progress, share
-│   ├── TendieBuilder.swift    # Frame extraction + .tendies packaging
-│   ├── ZipWriter.swift         # Minimal stored-ZIP writer
-│   └── Assets.xcassets/       # App icon
-└── TendieMaker.xcodeproj/
-```
-
-## Lessons learned the hard way
-
-- **Don't deflate in a hand-rolled ZIP writer.** A subtle bug in our custom deflate path produced archives where every entry failed to inflate (`invalid compressed data to inflate`) — tendies flashed completely black. Storing uncompressed fixed it with negligible size cost.
-- **`AVAssetImageGenerator` needs zero time tolerance.** Without `requestedTimeToleranceBefore/After = .zero`, it returns the nearest keyframe for many timestamps — we shipped a 149-frame tendie containing only a handful of unique images. Smooth after the fix.
-- **HDR videos need tone-mapping** before JPEG encoding, or every frame comes out black.
-
-## Contact
-
-Questions or something broken? Hit me up on X: @GOT_MUNCH1ES or IG @mikevillarroel
-
-## License
-
-MIT — see [LICENSE](LICENSE).
+- Free Apple IDs can install on their own devices (re-sign weekly).
+- If you have your Signulous certificate, you can also archive an IPA
+  in Xcode (Product → Archive) and sign it yourself for longer.
+- Frame budget is 400 (PosterBoard cap), min 12 fps — same as desktop.
