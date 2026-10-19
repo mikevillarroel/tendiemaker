@@ -321,7 +321,7 @@ struct ContentView: View {
                         }
                         Spacer()
                         Button(action: {
-                            if let url = URL(string: "https://x.com/GOT_MUNCH1ES") {
+                            if let url = URL(string: "https://x.com/MikeBuildsApp") {
                                 UIApplication.shared.open(url)
                             }
                         }) {
