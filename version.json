@@ -1,11 +1,10 @@
 {
   "app": "tendiemaker",
-  "latest_version": "1.0.6",
+  "latest_version": "1.0.7",
   "notes": [
-    "NEW: Lock Screen Preview — watch your tendie play with the real clock & date before you build it",
-    "First Frame preview stays one tap away",
+    "FIX: About photo, social icons and header icon now display correctly",
     "Bug fixes"
   ],
-  "page_url": "https://mikevillarroel.github.io/buildbox-ios/download.html?app=tendiemaker&v=1.0.6&ipa=https%3A%2F%2Fgithub.com%2Fmikevillarroel%2Ftendiemaker%2Freleases%2Fdownload%2Fv1.0.6%2FTendieMaker-1.0.6.ipa&size=4.0+MB&notes=NEW%3A+Lock+Screen+Preview+%E2%80%94+watch+your+tendie+play+with+the+real+clock+%26+date+before+you+build+it%7CFirst+Frame+preview+stays+one+tap+away%7CBug+fixes",
-  "ipa_url": "https://github.com/mikevillarroel/tendiemaker/releases/download/v1.0.6/TendieMaker-1.0.6.ipa"
+  "page_url": "https://mikevillarroel.github.io/buildbox-ios/download.html?app=tendiemaker&v=1.0.7&ipa=https%3A%2F%2Fgithub.com%2Fmikevillarroel%2Ftendiemaker%2Freleases%2Fdownload%2Fv1.0.7%2FTendieMaker-1.0.7.ipa&size=3.9+MB&notes=FIX%3A%20About%20photo%2C%20social%20icons%20and%20header%20icon%20now%20display%20correctly%7CBug%20fixes",
+  "ipa_url": "https://github.com/mikevillarroel/tendiemaker/releases/download/v1.0.7/TendieMaker-1.0.7.ipa"
 }
