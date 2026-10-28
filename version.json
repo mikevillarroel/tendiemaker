@@ -1,10 +1,10 @@
 {
   "app": "tendiemaker",
-  "latest_version": "1.0.7",
+  "latest_version": "1.0.8",
   "notes": [
-    "FIX: About photo, social icons and header icon now display correctly",
-    "Bug fixes"
+    "NEW: Real preview, playback speed, and Files import",
+    "UI polish and bug fixes"
   ],
-  "page_url": "https://mikevillarroel.github.io/buildbox-ios/download.html?app=tendiemaker&v=1.0.7&ipa=https%3A%2F%2Fgithub.com%2Fmikevillarroel%2Ftendiemaker%2Freleases%2Fdownload%2Fv1.0.7%2FTendieMaker-1.0.7.ipa&size=3.9+MB&notes=FIX%3A%20About%20photo%2C%20social%20icons%20and%20header%20icon%20now%20display%20correctly%7CBug%20fixes",
-  "ipa_url": "https://github.com/mikevillarroel/tendiemaker/releases/download/v1.0.7/TendieMaker-1.0.7.ipa"
+  "page_url": "https://mikevillarroel.github.io/buildbox-ios/download.html?app=tendiemaker&v=1.0.8&ipa=https%3A%2F%2Fgithub.com%2Fmikevillarroel%2Ftendiemaker%2Freleases%2Fdownload%2Fv1.0.8%2FTendieMaker-1.0.8.ipa&size=3.5+MB&notes=NEW%3A%20Real%20preview%2C%20playback%20speed%2C%20and%20Files%20import%7CUI%20polish%20and%20bug%20fixes",
+  "ipa_url": "https://github.com/mikevillarroel/tendiemaker/releases/download/v1.0.8/TendieMaker-1.0.8.ipa"
 }
