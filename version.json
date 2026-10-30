@@ -1,10 +1,9 @@
 {
   "app": "tendiemaker",
-  "latest_version": "1.0.8",
+  "latest_version": "1.0.9",
   "notes": [
-    "NEW: Real preview, playback speed, and Files import",
-    "UI polish and bug fixes"
+    "Icon fix: corrected app icon (no more white edges)"
   ],
-  "page_url": "https://mikevillarroel.github.io/buildbox-ios/download.html?app=tendiemaker&v=1.0.8&ipa=https%3A%2F%2Fgithub.com%2Fmikevillarroel%2Ftendiemaker%2Freleases%2Fdownload%2Fv1.0.8%2FTendieMaker-1.0.8.ipa&size=3.5+MB&notes=NEW%3A%20Real%20preview%2C%20playback%20speed%2C%20and%20Files%20import%7CUI%20polish%20and%20bug%20fixes",
-  "ipa_url": "https://github.com/mikevillarroel/tendiemaker/releases/download/v1.0.8/TendieMaker-1.0.8.ipa"
+  "page_url": "https://mikevillarroel.github.io/buildbox-ios/download.html?app=tendiemaker&v=1.0.9&ipa=https%3A%2F%2Fgithub.com%2Fmikevillarroel%2Ftendiemaker%2Freleases%2Fdownload%2Fv1.0.9%2FTendieMaker-1.0.9.ipa&size=3.5+MB&notes=Icon%20fix%3A%20corrected%20app%20icon%20%28no%20more%20white%20edges%29",
+  "ipa_url": "https://github.com/mikevillarroel/tendiemaker/releases/download/v1.0.9/TendieMaker-1.0.9.ipa"
 }
